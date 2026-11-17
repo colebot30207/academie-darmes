@@ -48,8 +48,9 @@ Coach cards are in `index.html` under `<!-- COACHES -->`. Each coach is one `<ar
 ## Contact form (Web3Forms)
 
 - The key lives in **`js/config.js`** → `web3formsAccessKey`.
-- Create the key at web3forms.com **using Information@academiedarmes.com**. Web3Forms sends every submission
-  to the email the key was created with.
+- Web3Forms sends every submission to the email the key was created with. The current key is a temporary one
+  on Cole's account. When Information@academiedarmes.com can receive mail, create a new key with that address
+  at app.web3forms.com and swap it in.
 - Until a key is set, the form validates and then shows a "not connected yet" message with the phone and email.
 - Spam protection: hidden `botcheck` honeypot, plus Web3Forms' own filtering.
 
