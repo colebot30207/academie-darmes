@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://academiedarmes.com/sitemap.xml
