@@ -44,7 +44,6 @@
     "image": "https://academiedarmes.com/assets/img/og-share.jpg",
     "logo": "https://academiedarmes.com/assets/logo/logo-shield-transparent.png",
     "telephone": "+1-609-791-0321",
-    "email": "Information@academiedarmes.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "287 South Main Street",
@@ -98,7 +97,7 @@
       <div class="container hero-content">
         <h1 id="hero-title">Fencing in Lambertville</h1>
         <span class="hero-rule" aria-hidden="true"></span>
-        <p class="hero-tagline"><span class="ph">[PLACEHOLDER: Philip's tagline]</span></p>
+        <p class="hero-tagline">Expert fencing instruction for every level, continuing a 45-year Lambertville tradition.</p>
         <a class="btn btn-gold" href="#contact">Get in touch</a>
       </div>
     </section>
@@ -108,7 +107,7 @@
       <div class="container classes-grid">
         <div class="classes-copy">
           <h2 id="classes-title">Classes &amp; Membership</h2>
-          <p class="lede"><span class="ph">[PLACEHOLDER: 1–2 sentences about classes: ages, levels, weapons]</span></p>
+          <p class="lede">Foil, épée and sabre instruction in group classes and private lessons.</p>
           <p class="muted">Schedules, pricing and forms open as PDFs in a new tab.</p>
 
           <!--
@@ -142,53 +141,61 @@
         <h2 id="coaches-title">Coaches</h2>
 
         <!--
-          COACH CARDS: edit names/bios directly below. Each card is one <article class="coach">.
-          Photo cards use .coach-photo; cards without a photo use .coach-mono (initials).
+          COACH CARDS: one <article class="coach"> per coach, in display order.
+          Adding a photo is a ONE-LINE SWAP. Replace the initials line, e.g.
+            <div class="coach-pic coach-pic--initials" aria-hidden="true">MG</div>
+          with
+            <img class="coach-pic" src="assets/img/coach-mike-griffin-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="Mike Griffin">
+          Photos should be portrait 4:5 (600x750 WebP), like Jon's and Jacob's.
         -->
-        <div class="coach-grid coach-grid--lead">
+        <div class="coach-grid">
           <article class="coach">
-            <!-- TODO(Cole): headshot is UNCONFIRMED. It may be Jon or Jacob. Placed on Jon's card
-                 until confirmed. If it's Jacob, move this <img> to Jacob's card. -->
-            <div class="coach-photo">
-              <img src="assets/img/coach-headshot-tbd-616.webp"
-                   srcset="assets/img/coach-headshot-tbd-320.webp 320w, assets/img/coach-headshot-tbd-616.webp 616w"
-                   sizes="(min-width: 700px) 340px, 90vw" width="616" height="890" loading="lazy" decoding="async"
-                   alt="Coach portrait in a black fencing jacket, holding a foil and mask">
-            </div>
-            <h3>Jon <span class="ph">[PLACEHOLDER: last name]</span></h3>
-            <p><span class="ph">[PLACEHOLDER: short bio]</span></p>
+            <img class="coach-pic" src="assets/img/coach-jon-kurpaska-600.webp" srcset="assets/img/coach-jon-kurpaska-320.webp 320w, assets/img/coach-jon-kurpaska-600.webp 600w" sizes="(min-width: 960px) 270px, (min-width: 600px) 30vw, 46vw" width="600" height="750" loading="lazy" decoding="async" alt="Jon Kurpaska">
+            <h3>Jon Kurpaska</h3>
+            <p class="coach-role">Foil &amp; Épée Coach</p>
+            <p class="coach-lessons">Group &amp; Private Lessons</p>
           </article>
-
           <article class="coach">
-            <div class="coach-photo coach-photo--empty">
-              <span class="mono-initials" aria-hidden="true">J</span>
-              <span class="ph">[PLACEHOLDER: Jacob's photo]</span>
-            </div>
-            <h3>Jacob <span class="ph">[PLACEHOLDER: last name]</span></h3>
-            <p><span class="ph">[PLACEHOLDER: short bio]</span></p>
+            <img class="coach-pic" src="assets/img/coach-jacob-sjostedt-600.webp" srcset="assets/img/coach-jacob-sjostedt-320.webp 320w, assets/img/coach-jacob-sjostedt-600.webp 600w" sizes="(min-width: 960px) 270px, (min-width: 600px) 30vw, 46vw" width="600" height="750" loading="lazy" decoding="async" alt="Jacob Sjostedt">
+            <h3>Jacob Sjostedt</h3>
+            <p class="coach-role">Foil &amp; Épée Coach</p>
+            <p class="coach-lessons">Group &amp; Private Lessons</p>
           </article>
-        </div>
-
-        <div class="coach-grid coach-grid--rest">
-          <article class="coach coach--small">
-            <div class="coach-mono" aria-hidden="true">DG</div>
-            <h3>Dirk Golgar</h3>
-            <p><span class="ph">[PLACEHOLDER: short bio]</span></p>
-          </article>
-          <article class="coach coach--small">
-            <div class="coach-mono" aria-hidden="true">MG</div>
+          <article class="coach">
+            <div class="coach-pic coach-pic--initials" aria-hidden="true">MG</div>
             <h3>Mike Griffin</h3>
-            <p><span class="ph">[PLACEHOLDER: short bio]</span></p>
+            <p class="coach-role">Foil, Épée &amp; Sabre Coach</p>
+            <p class="coach-lessons">Group &amp; Private Lessons</p>
           </article>
-          <article class="coach coach--small">
-            <div class="coach-mono" aria-hidden="true">KO</div>
+          <article class="coach">
+            <div class="coach-pic coach-pic--initials" aria-hidden="true">DG</div>
+            <h3>Dirk Golfer</h3>
+            <p class="coach-role">Foil &amp; Épée Coach</p>
+            <p class="coach-lessons">Group Lessons</p>
+          </article>
+          <article class="coach">
+            <div class="coach-pic coach-pic--initials" aria-hidden="true">PD</div>
+            <h3>Paolo Damiani</h3>
+            <p class="coach-role">Épée Coach</p>
+            <p class="coach-lessons">Group &amp; Private Lessons</p>
+          </article>
+          <article class="coach">
+            <div class="coach-pic coach-pic--initials" aria-hidden="true">JN</div>
+            <h3>Jennifer Niemeyer</h3>
+            <p class="coach-role">Épée Coach</p>
+            <p class="coach-lessons">Group &amp; Private Lessons</p>
+          </article>
+          <article class="coach">
+            <div class="coach-pic coach-pic--initials" aria-hidden="true">KO</div>
             <h3>Kevin Orcutt</h3>
-            <p><span class="ph">[PLACEHOLDER: short bio]</span></p>
+            <p class="coach-role">Foil Coach</p>
+            <p class="coach-lessons">Group &amp; Private Lessons</p>
           </article>
-          <article class="coach coach--small">
-            <div class="coach-mono" aria-hidden="true">MT</div>
+          <article class="coach">
+            <div class="coach-pic coach-pic--initials" aria-hidden="true">MT</div>
             <h3>Mike Travaline</h3>
-            <p><span class="ph">[PLACEHOLDER: short bio]</span></p>
+            <p class="coach-role">Foil Coach</p>
+            <p class="coach-lessons">Group Lessons</p>
           </article>
         </div>
       </div>
@@ -199,7 +206,7 @@
       <div class="container about-grid">
         <div class="about-copy">
           <h2 id="about-title">About the Academy</h2>
-          <p class="lede"><span class="ph">[PLACEHOLDER: 2–3 sentences about the academy]</span></p>
+          <p class="lede">Académie d'Armes is proud to carry forward the rich legacy of the distinguished Lambertville fencing academy that has served the Bucks, Montgomery, Mercer, and Hunterdon county communities for over 45 years. Honoring this tradition of excellence, Académie d'Armes is committed to inspiring the next generation of fencers through exceptional instruction, competitive development, and a continued passion for the sport.</p>
         </div>
         <figure class="about-photo">
           <img src="assets/img/fencers-lunge-800.webp"
@@ -223,7 +230,7 @@
       <div class="container contact-grid">
         <div class="contact-info">
           <h2 id="contact-title">Contact</h2>
-          <p>Call, email or send a message and we’ll get back to you.</p>
+          <p>Call or send a message and we’ll get back to you.</p>
           <dl class="contact-list">
             <div>
               <dt>Address</dt>
@@ -232,10 +239,6 @@
             <div>
               <dt>Phone</dt>
               <dd><a href="tel:+16097910321">609-791-0321</a></dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:Information@academiedarmes.com">Information@academiedarmes.com</a></dd>
             </div>
           </dl>
         </div>
@@ -301,7 +304,7 @@
            width="120" height="175" loading="lazy" decoding="async" alt="Académie d'Armes">
       <address class="footer-contact">
         287 South Main Street, Lambertville, NJ 08530<br>
-        <a href="tel:+16097910321">609-791-0321</a> · <a href="mailto:Information@academiedarmes.com">Information@academiedarmes.com</a>
+        <a href="tel:+16097910321">609-791-0321</a>
       </address>
       <p class="footer-meta">
         <span>© <span id="year">2026</span> Académie d’Armes</span>

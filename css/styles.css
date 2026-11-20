@@ -270,51 +270,30 @@ p { margin: 0 0 1em; }
 /* ---------- Coaches ---------- */
 .coaches { background: var(--white); border-block: 1px solid var(--line); }
 .coaches h2 { margin-bottom: 40px; }
-.coach-grid { display: grid; gap: 40px 28px; }
-.coach-grid--lead { grid-template-columns: 1fr; margin-bottom: 56px; }
-.coach-grid--rest { grid-template-columns: 1fr 1fr; }
-.coach h3 { margin: 18px 0 8px; }
-.coach p { color: var(--muted); margin: 0; }
-.coach--small h3 { font-size: 1.35rem; margin-top: 14px; }
-.coach--small p { font-size: 0.95rem; }
+.coach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 16px; }
+@media (min-width: 600px) { .coach-grid { grid-template-columns: repeat(3, 1fr); gap: 44px 24px; } }
+@media (min-width: 960px) { .coach-grid { grid-template-columns: repeat(4, 1fr); gap: 48px 28px; } }
 
-.coach-photo {
-  aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius);
-  background: var(--navy);
+/* Photo or initials: same 4:5 frame, so swapping one for the other is one line. */
+.coach-pic {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%;
+  border-radius: var(--radius); background: var(--navy);
 }
-.coach-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; }
-.coach-photo--empty {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
-  color: rgba(255, 255, 255, 0.85); text-align: center; padding: 20px;
-}
-.mono-initials, .coach-mono {
-  font-family: var(--serif); font-weight: 600; color: var(--gold);
-}
-.mono-initials { font-size: 5rem; line-height: 1; }
-.coach-mono {
+.coach-pic--initials {
   display: flex; align-items: center; justify-content: center;
-  aspect-ratio: 4 / 3; border-radius: var(--radius);
-  background: var(--navy);
+  font-family: var(--serif); font-weight: 600; color: var(--gold);
+  font-size: clamp(2.2rem, 8vw, 3.4rem); letter-spacing: 0.04em;
   box-shadow: inset 0 0 0 6px var(--navy), inset 0 0 0 7px rgba(253, 193, 38, 0.55);
-  font-size: clamp(2.4rem, 9vw, 3.2rem); letter-spacing: 0.04em;
 }
 
-@media (max-width: 639px) {
-  .coach-grid--lead .coach-photo { aspect-ratio: 1 / 1; }
-}
-@media (min-width: 640px) {
-  .coach-grid--lead { grid-template-columns: 1fr 1fr; gap: 40px; }
-}
-.coach h3 .ph { font-size: 0.5em; vertical-align: middle; }
-
-@media (min-width: 960px) {
-  .coach-grid--lead { gap: 48px; }
-  .coach-grid--lead .coach {
-    display: grid; grid-template-columns: minmax(200px, 46%) 1fr; grid-template-rows: auto 1fr; gap: 0 28px; align-items: start;
-  }
-  .coach-grid--lead .coach h3 { margin-top: 4px; }
-  .coach-grid--lead .coach-photo { grid-row: span 2; }
-  .coach-grid--rest { grid-template-columns: repeat(4, 1fr); }
+.coach h3 { font-size: 1.4rem; margin: 14px 0 4px; }
+.coach p { margin: 0; font-size: 0.92rem; line-height: 1.45; }
+.coach-role { color: var(--ink); font-weight: 500; }
+.coach-lessons { color: var(--muted); }
+@media (min-width: 600px) {
+  .coach h3 { font-size: 1.55rem; }
+  .coach p { font-size: 0.97rem; }
 }
 
 /* ---------- About ---------- */

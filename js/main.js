@@ -117,7 +117,7 @@
 
     var key = cfg.web3formsAccessKey || "";
     if (!key || key.indexOf("PASTE_") === 0) {
-      showStatus("error", "The contact form isn't connected yet. Please call 609-791-0321 or email Information@academiedarmes.com.");
+      showStatus("error", "The contact form isn't connected yet. Please call 609-791-0321.");
       return;
     }
 

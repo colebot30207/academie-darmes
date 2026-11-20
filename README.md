@@ -34,16 +34,19 @@ Docs are served with `max-age=0`, so updated PDFs show up right away.
 
 ## Edit a coach card
 
-Coach cards are in `index.html` under `<!-- COACHES -->`. Each coach is one `<article class="coach">`.
+Coach cards are in `index.html` under `<!-- COACHES -->`, one `<article class="coach">` per coach, in display order.
+Each card has a name (`h3`), a role line (`.coach-role`) and a lessons line (`.coach-lessons`).
 
-- **Name / bio:** replace the `<span class="ph">[PLACEHOLDER: …]</span>` with plain text.
-- **Add a photo to a card that only has initials:**
-  1. Export a portrait photo (about 616px wide, 4:5) as WebP into `assets/img/`.
-  2. Replace `<div class="coach-mono" aria-hidden="true">DG</div>` with
-     `<div class="coach-photo"><img src="assets/img/NAME.webp" width="616" height="890" loading="lazy" alt="Coach portrait"></div>`.
-- **Headshot note:** the current headshot is unconfirmed and sits on Jon's card (see the `TODO(Cole)` comment).
-  If it's Jacob, move the `<img>` into Jacob's `.coach-photo` and remove `coach-photo--empty` there.
-- Don't caption any group photo with a coach's name.
+**Adding a coach photo is a one-line swap.**
+
+1. Crop the photo to portrait 4:5 and save it as WebP, about 600×750, in `assets/img/`,
+   e.g. `assets/img/coach-mike-griffin-600.webp`.
+2. In that coach's card, replace the initials line
+   `<div class="coach-pic coach-pic--initials" aria-hidden="true">MG</div>`
+   with
+   `<img class="coach-pic" src="assets/img/coach-mike-griffin-600.webp" width="600" height="750" loading="lazy" decoding="async" alt="Mike Griffin">`
+
+Photos and initials share the same 4:5 frame, so nothing else changes. Don't caption group photos with a coach's name.
 
 ## Contact form (Web3Forms)
 
@@ -54,13 +57,10 @@ Coach cards are in `index.html` under `<!-- COACHES -->`. Each coach is one `<ar
 - Until a key is set, the form validates and then shows a "not connected yet" message with the phone and email.
 - Spam protection: hidden `botcheck` honeypot, plus Web3Forms' own filtering.
 
-## Placeholders
+## Email
 
-Anything still missing shows on the page as a dashed `[PLACEHOLDER: …]` tag. To find them all:
-
-```bash
-grep -n "PLACEHOLDER" index.html
-```
+The domain has no mailbox yet, so the site shows no email address (contact section, footer and JSON-LD).
+When email is set up, add it back in those three places and swap the Web3Forms key (see above).
 
 ## Local preview
 
